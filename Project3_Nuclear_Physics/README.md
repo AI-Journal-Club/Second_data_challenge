@@ -1,7 +1,7 @@
 # Welcome to Nuclear Physics Project
 
 ## Team members
-Phong, Xiaoliang, Mic, Jake, Skye, Dana, Chakradar
+Phong Dang, Xiaoliang Wan, Jake Gilson, Skye Strain, Michela Negro, Dana Browne, Chakradar Rangi
 
 ## Problem statement
 We aim to build a PDE solver for solving simple Hamiltonian of atomic nuclei. As a starting point, we consider the simplest system, a deuteron which consists of one proton and one neutron. The advantage is that its Hamiltonian
