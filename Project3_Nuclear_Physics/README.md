@@ -46,12 +46,12 @@ $$
 ### Week 1: 02/20/26
 - Determine the starting point
 - Set the agenda
-- Choose a PDE solver package: [\verb|pinns-torch|](https://github.com/rezaakb/pinns-torch)
+- Choose a PDE solver package: [`pinns-torch`](https://github.com/rezaakb/pinns-torch)
 
 ### Week 2: 02/27/26
 -  Xiaoliang presents an introduction on PINNs
 
 ### Week 3: 03/06/26
-- Skye presents the tutorial notebook from \verb|pinns-torch|
-- Jake presents an example \verb|pinns-torch|
+- Skye presents the tutorial notebook from `pinns-torch`
+- Jake presents an example `pinns-torch`
 - Phong presents a similar paper for seed idea arXiv:2211.04607v3 (if time permits)
