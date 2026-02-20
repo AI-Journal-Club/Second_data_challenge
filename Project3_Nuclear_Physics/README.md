@@ -1,7 +1,7 @@
 # Welcome to Nuclear Physics Project
 
 ## Team members
-Mic, Xiaoliang, Jake, Skye, Dana, Chakradar
+Phong, Xiaoliang, Mic, Jake, Skye, Dana, Chakradar
 
 ## Problem statement
 We aim to build a PDE solver for solving simple Hamiltonian of atomic nuclei. As a starting point, we consider the simplest system, a deuteron which consists of one proton and one neutron. The advantage is that its Hamiltonian
@@ -46,11 +46,12 @@ $$
 ### Week 1: 02/20/26
 - Determine the starting point
 - Set the agenda
+- Choose a PDE solver package: [\verb|pinns-torch|](https://github.com/rezaakb/pinns-torch)
 
 ### Week 2: 02/27/26
 -  Xiaoliang presents an introduction on PINNs
 
 ### Week 3: 03/06/26
-- Skye presents the tutorial notebook
-- Jake presents an example
-- Phong presents the paper mattheakis2022
+- Skye presents the tutorial notebook from \verb|pinns-torch|
+- Jake presents an example \verb|pinns-torch|
+- Phong presents a similar paper for seed idea arXiv:2211.04607v3 (if time permits)
