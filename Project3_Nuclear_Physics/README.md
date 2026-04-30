@@ -1,7 +1,7 @@
 # Welcome to Nuclear Physics Project
 
 ## Team members
-Phong Dang, Xiaoliang Wan, Jake Gilson, Skye Strain, Michela Negro, Dana Browne, Chakradar Rangi
+Phong Dang, Xiaoliang Wan, Evander Espinoza, Jake Gilson, Skye Strain, Dana Browne
 
 ## Problem statement
 We aim to build a PDE solver for solving simple Hamiltonian of atomic nuclei. As a starting point, we consider the simplest system, a deuteron which consists of one proton and one neutron. The advantage is that its Hamiltonian
@@ -54,4 +54,12 @@ $$
 ### Week 3: 03/06/26
 - Skye presents the tutorial notebook from `pinns-torch`
 - Jake presents an example `pinns-torch`
-- Phong presents a similar paper for seed idea arXiv:2211.04607v3 (if time permits)
+
+### Week 4: 03/13/26
+- Spring break
+
+### Week 5: 03/20/26
+- Formulate loss functions
+
+### Week 6 and forward: 
+- Implementation
