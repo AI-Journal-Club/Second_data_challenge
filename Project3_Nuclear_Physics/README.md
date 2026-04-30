@@ -63,4 +63,4 @@ $$
 
 ### Week 6 and forward: 
 - Implementation
-- Xiaoliang suggested [`SOAP`][https://github.com/nikhilvyas/SOAP/tree/main] optimizer, which can be easily integrated with `torch` and seems to outperform the common Adam optimizer.
+- Xiaoliang suggested [`SOAP`](https://github.com/nikhilvyas/SOAP/tree/main) optimizer, which can be easily integrated with `torch` and seems to outperform the common Adam optimizer.
