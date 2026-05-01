@@ -16,9 +16,13 @@ $$
 H = \frac{\mathbf{p}^2}{2m} + V(r).
 $$
 
-Here the kinetic energy of the center of mass has been set to zero to remove spurity.
+Here the kinetic energy of the center of mass has been set to zero to remove spurity. The Schrodinger equation is
 
-Our goal is to set up a PDE solver that can be used to solve for different phenomenological potentials $V(r)$. Some simple choices are
+$$
+- \frac{\hbar^2}{2m} \Nabla^2 \Psi + (V(r) - E)\Psi = 0
+$$
+
+Our goal is to set up a PDE solver that can be used to solve the Schrodinger equation for different phenomenological potentials $V(r)$. Some simple choices are
 
 1. Square well with parameters $V_0, R$
 
