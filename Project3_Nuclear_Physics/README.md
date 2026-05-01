@@ -19,7 +19,7 @@ $$
 Here the kinetic energy of the center of mass has been set to zero to remove spurity. The Schrodinger equation is
 
 $$
- \frac{-\hbar^2}{2m} \Nabla^2 \Psi + (V(r) - E)\Psi = 0.
+ \frac{-\hbar^2}{2m} \nabla^2 \Psi + (V(r) - E)\Psi = 0.
 $$
 
 By separating the wave function into a radial and an angular part, $\Psi(r,\theta,\phi) = R(r) Y(\theta,\phi)$, where the normalized angular wave function $Y$ is a spherical harmonics
