@@ -16,33 +16,9 @@ $$
 H = \frac{\mathbf{p}^2}{2m} + V(r).
 $$
 
-Here the kinetic energy of the center of mass has been set to zero to remove spurity. The Schrodinger equation is
+Here the kinetic energy of the center of mass has been set to zero to remove spurity.
 
-$$
- \frac{-\hbar^2}{2m} \Nabla^2 \Psi + (V(r) - E)\Psi = 0.
-$$
-
-By separating the wave function into a radial and an angular part, $\Psi(r,\theta,\phi) = R(r) Y(\theta,\phi)$, where the normalized angular wave function $Y$ is a spherical harmonics
-
-$$
-Y_{lm}(\theta,\phi) = \sqrt{\frac{2l+1}{4\pi} \frac{(l-m)!}{(l+m)!}} e^{im\phi} P_{lm}(\cos\theta),
-$$
-
-we are left with the following equation
-
-$$
-\frac{1}{R} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) - \frac{2mr^2}{\hbar^2}(V(r) - E) = l(l+1).
-$$
-
-We can change variable to simplify things by introducing $u(r) = r R(r)$, then we have the radial equation
-
-$$
-\frac{-\hbar^2}{2 m} \frac{d^2 u}{dr^2} + \left[V + \frac{\hbar^2}{2 m} \frac{l(l+1)}{r^2} - E \right] u = 0.
-$$
-
-Normalization of the wave function is equivalent to $\int_0^\infty |u|^2 dr = 1$.
-
-Our goal is to set up a PDE solver that can be used to solve the radial Schrodinger equation for different phenomenological potentials $V(r)$. Some simple choices are
+Our goal is to set up a PDE solver that can be used to solve for different phenomenological potentials $V(r)$. Some simple choices are
 
 1. Square well with parameters $V_0, R$
 
