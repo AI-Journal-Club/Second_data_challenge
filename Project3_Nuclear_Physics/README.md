@@ -44,22 +44,22 @@ Normalization of the wave function is equivalent to $\int_0^\infty |u|^2 dr = 1$
 
 Our goal is to set up a PDE solver that can be used to solve the radial Schrodinger equation for different phenomenological potentials $V(r)$. Some simple choices are
 
-1. Square well with parameters $V_0, R$
+1. Square well with parameters $V_0=59.66$ MeV and $R_0 = 1.5$ fm
 
 $$
 V(r) = \begin{cases} 
--V_0 & \text{if } r < R \\
-0 & \text{if } r \ge R 
+-V_0 & \text{if } r < R_0 \\
+0 & \text{if } r \ge R_0 
 \end{cases}
 $$
 
-2. Gaussian central with parameters $V_0, R$
+2. Gaussian central with parameters $V_0=70.92$ MeV and $R = 1.5$ fm
 
 $$
 V(r) = -V_0 e^{-r^2/R^2}
 $$
 
-3. Yukawa potential with parameters $g, \mu$
+3. Yukawa potential with parameters $g=8.22$ MeV$^{1/2}$ and $\mu = 1/a$ with $a=1.5$ fm
 
 $$
 V(r) = -g^2 \frac{e^{-\mu r}}{r}
