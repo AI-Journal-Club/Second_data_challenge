@@ -65,26 +65,43 @@ $$
 V(r) = -g^2 \frac{e^{-\mu r}}{r}
 $$
 
-## Timeline
+## Phase shift fitting
 
-### Week 1: 02/20/26
-- Determine the starting point
-- Set the agenda
-- Choose a PDE solver package: [`pinns-torch`](https://github.com/rezaakb/pinns-torch)
+The potential parameters should be constrained by experimental nucleon-nucleon scattering data rather than set by hand. The file `include/phase_shifts.py` provides utilities for this.
 
-### Week 2: 02/27/26
--  Xiaoliang presents an introduction on PINNs
+### Scattering setup
 
-### Week 3: 03/06/26
-- Skye presents the tutorial notebook from `pinns-torch`
-- Jake presents an example `pinns-torch`
+For positive energy $E > 0$, the radial Schrödinger equation has the same form as the bound-state case but with $E > 0$. Far from the scatterer where $V(r) \approx 0$, the $l = 0$ solution takes the asymptotic form
 
-### Week 4: 03/13/26
-- Spring break
+$$
+u(r) \xrightarrow{r \to \infty} A \sin(kr + \delta_0), \qquad k = \frac{\sqrt{2mE}}{\hbar}
+$$
 
-### Week 5: 03/20/26
-- Formulate loss functions
+The phase shift $\delta_0$ is extracted by matching the numerical solution to this free-particle form at a large matching radius $r_m$:
 
-### Week 6 and forward: 
-- Implementation
-- Xiaoliang suggested [`SOAP`](https://github.com/nikhilvyas/SOAP/tree/main) optimizer, which can be easily integrated with `torch` and seems to outperform the common Adam optimizer.
+$$
+\delta_0 = \text{atan2}\!\left(k\, u(r_m),\, u'(r_m)\right) - k\, r_m \pmod{\pi}
+$$
+
+By Levinson's theorem, $\delta_0(k \to 0) = n_b \pi$ where $n_b$ is the number of bound states. For the deuteron $n_b = 1$.
+
+### Fitting objective
+
+Given a parametric potential $V(r;\theta)$, the parameters $\theta$ are found by minimising the chi-squared
+
+$$
+\chi^2(\theta) = \sum_i \left[\delta_0(k_i;\theta) - \tilde\delta(k_i)\right]^2
+$$
+
+where $\tilde\delta(k_i)$ are the experimental phase shifts (in degrees) at wavenumber $k_i$. This is a single-channel ($l = 0$) fit.
+
+### Kinematic conversions
+
+Experimental data is often given in lab-frame or momentum variables. The conversions to relative wavenumber $k$ (fm$^{-1}$) are:
+
+- **Relative kinetic energy** $T_{rel}$ (MeV): $\quad k = \sqrt{2m T_{rel}}\, /\, \hbar$
+- **Relative momentum** $p_{rel}$ (MeV/$c$): $\quad k = p_{rel} / \hbar$
+
+See [`test/Phase_shifts.ipynb`](test/Phase_shifts.ipynb) for a worked example with all three potentials.
+
+**Note:** The initial parameters must support the same number of bound states as the target data. Use `bounds` to prevent the optimizer from crossing a bound-state threshold, which would flip the phase-shift branch and break the chi-squared landscape.
